@@ -31,14 +31,17 @@ const shoppingButton = document.querySelector("#shopping-cart-button");
 document.addEventListener("click", function (e) {
   if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
     navbarNav.classList.remove("active");
+    e.preventDefault();
   }
 
   if (!searchButton.contains(e.target) && !seacrhForm.contains(e.target)) {
     seacrhForm.classList.remove("active");
+    e.preventDefault();
   }
 
   if (!shoppingButton.contains(e.target) && !shoppingCart.contains(e.target)) {
     shoppingCart.classList.remove("active");
+    e.preventDefault();
   }
 });
 
